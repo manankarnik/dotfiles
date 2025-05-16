@@ -1,0 +1,53 @@
+@theme "~/.config/daub/gen/colors.rasi"
+
+* {
+    background-color: @lv00;
+}
+
+window {
+    border: 2px;
+    border-color: @clbl;
+}
+
+inputbar {
+    color: @lv05;
+    padding: 12px;
+    background-color: @lv00;
+}
+
+entry, prompt {
+    text-color: inherit;
+    background-color: inherit;
+}
+
+prompt {
+    margin: 0px 12px;
+}
+
+listview {
+    background-color: @lv00;
+    padding: 12px;
+    lines: 8;
+    columns: 2;
+}
+
+element {
+    padding: 12px;
+    background-color: transparent;
+    color: @lv05;
+}
+
+element selected.normal {
+    background-color: @lv00;
+    text-color: @clyl;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element-icon {
+    padding: 0px 12px 0px 0px;
+    size: 36px;
+}

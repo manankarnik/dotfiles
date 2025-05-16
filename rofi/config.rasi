@@ -1,0 +1,11 @@
+configuration {
+    font: "Iosevka Nerd Font Mono Bold 16";
+    show-icons: true;
+    drun-display-format: "{icon} {name}";
+    modi: "run,drun,window";
+    display-run:    "";
+    display-drun:   "󱕷";
+    display-window: "";
+}
+
+@theme "theme.rasi"
