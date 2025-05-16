@@ -19,4 +19,4 @@ config_link() {
 }
 
 home_link ".xinitrc"
-config_link "bspwm"
+config_link "bspwm" "kitty"
