@@ -24,4 +24,4 @@ config_link() {
 }
 
 home_link .xinitrc .bashrc
-config_link bspwm sxhkd kitty rofi polybar
+config_link bspwm sxhkd kitty rofi polybar nvim
