@@ -1,27 +1,22 @@
 #!/bin/sh
 
+link() {
+    local files=("$@")
+    for file in "${files[@]}"; do
+        if [ -L "$LINK_DIR/$file" ]; then
+            unlink "$LINK_DIR/$file"
+        else
+            mkdir -p $(dirname "$LINK_DIR/$file")
+        fi
+        ln -sv "$DOTFILES_DIR/$file" "$LINK_DIR/$file"
+    done
+}
+
 DOTFILES_DIR="$HOME/dotfiles"
 CONFIG_DIR="$HOME/.config"
 
-home_link() {
-    local files=("$@")
-    for file in "${files[@]}"; do
-        if [ -L "$HOME/$file" ]; then
-            unlink "$HOME/$file"
-        fi
-        ln -sv "$DOTFILES_DIR/$file" "$HOME/$file"
-    done
-}
+LINK_DIR=$HOME
+link .xinitrc .bashrc
 
-config_link() {
-    local files=("$@")
-    for file in "${files[@]}"; do
-        if [ -L "$CONFIG_DIR/$file" ]; then
-            unlink "$CONFIG_DIR/$file"
-        fi
-        ln -sv "$DOTFILES_DIR/$file" "$CONFIG_DIR/$file"
-    done
-}
-
-home_link .xinitrc .bashrc
-config_link bspwm sxhkd kitty rofi polybar nvim
+LINK_DIR=$CONFIG_DIR
+link bspwm sxhkd kitty rofi polybar nvim
