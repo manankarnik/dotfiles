@@ -7,7 +7,7 @@ end
 -- =============================================
 -- Core UI Elements
 -- =============================================
-hi("Normal",      { fg = colors.lv05 })
+hi("Normal",      { fg = colors.lv05, bg = colors.lv00 })
 hi("NormalFloat", { fg = colors.lv05, bg = colors.lv01 })
 hi("CursorLine",  { bg = colors.lv01 })
 hi("Visual",      { bg = colors.lv02 })
@@ -66,7 +66,7 @@ hi("Typedef", { link = "Type" })
 hi("Special", { fg = colors.clbn })
 hi("SpecialChar", { link = "Special" })
 hi("Tag", { fg = colors.clyl })
-hi("Delimiter", { link = "Normal" })
+hi("Delimiter", { fg = colors.lv05 })
 hi("SpecialComment", { link = "Special" })
 hi("Debug", { fg = colors.clrd })
 
