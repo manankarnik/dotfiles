@@ -12,6 +12,7 @@ local options = {
 	undofile       = true,
 	expandtab      = true,
 	confirm        = true,
+	showmode       = false,
 	swapfile       = false,
 	backup         = false,
 
@@ -22,7 +23,7 @@ local options = {
 	updatetime     = 250,
 
 	guicursor      = "",
-	signcolumn     = "no",
+	signcolumn     = "yes",
 	inccommand     = "split",
 	cursorlineopt  = "number",
 	statuscolumn   = "%s%=%{!&number && !&relativenumber ? '' : v:virtnum != 0 ? '' : v:relnum == 0 ? v:lnum : v:relnum} ",
