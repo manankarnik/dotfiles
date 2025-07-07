@@ -133,6 +133,20 @@ hi("TabLineFill", { fg = colors.lv03, bg = colors.lv01 })
 hi("TabLineSel",  { fg = colors.lv04, bg = colors.lv01 })
 
 -- =============================================
+-- Mini Status Line
+-- =============================================
+hi("MiniStatuslineModeNormal",  { fg = colors.lv01, bg = colors.clgn, bold = true })
+hi("MiniStatuslineModeInsert",  { fg = colors.lv01, bg = colors.clyl, bold = true })
+hi("MiniStatuslineModeVisual",  { fg = colors.lv01, bg = colors.clbl, bold = true })
+hi("MiniStatuslineModeReplace", { fg = colors.lv01, bg = colors.clrd, bold = true })
+hi("MiniStatuslineModeCommand", { fg = colors.lv01, bg = colors.clmg, bold = true })
+hi("MiniStatuslineModeOther",   { fg = colors.lv01, bg = colors.clbn, bold = true })
+hi("MiniStatuslineDevinfo",     { fg = colors.lv05, bg = colors.lv01 })
+hi("MiniStatuslineFilename",    { fg = colors.lv05, bg = colors.lv01 })
+hi("MiniStatuslineFileinfo",    { fg = colors.lv05, bg = colors.lv02 })
+hi("MiniStatuslineInactive",    { fg = colors.lv04, bg = colors.lv01 })
+
+-- =============================================
 -- LSP and Tree-sitter Highlighting
 -- =============================================
 hi("@module",                   { fg = colors.clcy    })

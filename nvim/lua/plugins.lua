@@ -19,6 +19,10 @@ require("lazy").setup({
 	{ "vyfor/cord.nvim", build = ":Cord update" },
 	{ "tpope/vim-fugitive", cmd = "G" },
 	{
+		"echasnovski/mini.statusline",
+		opts = {},
+	},
+	{
 		"mbbill/undotree",
 		config = function()
 			vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "[U]ndo Tree" })
