@@ -1,0 +1,121 @@
+@import "colors.css";
+
+* {
+    font-family: CaskaydiaCoveNerdFontPropo;
+    font-size: 16px;
+}
+
+window {
+    background-color: transparent;
+}
+
+tooltip {
+    background-color: alpha(@lv00, 0.6);
+}
+
+.modules-left, .modules-center, .modules-right {
+    margin: 8px 8px 0 8px;
+    padding: 2px 8px;
+    background-color: alpha(@lv00, 0.6);
+    border: 2px solid @lv00;
+    border-radius: 12px;
+}
+
+window.empty .modules-center {
+    opacity: 0;
+}
+
+#workspaces button {
+    padding: 0;
+    background-color: transparent;
+    color: @lv05;
+}
+
+#workspaces button.empty {
+    color: @lv04;
+}
+
+#workspaces button.active {
+    color: @clmg;
+}
+
+#disk {
+    color: @clor;
+}
+
+#memory {
+    color: @clyl;
+}
+
+#cpu {
+    color: @clcy;
+}
+
+#temperature {
+    color: @clbl;
+}
+
+#battery.charging, #battery.plugged {
+    color: @clgn;
+}
+
+#workspaces button.urgent, #temperature.critical, #battery.critical:not(.charging) {
+    color: @clrd;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#bluetooth.disabled {
+    color: @clrd;
+}
+
+#bluetooth.on {
+    color: @clbl;
+}
+
+#bluetooth.off, #network.disabled, #network.disconnected, #wireplumber.muted {
+    color: @lv04;
+}
+
+#clock {
+    color: @clyl;
+}
+
+#clock.date {
+    color: @clor;
+}
+
+#custom-power {
+    color: @clrd;
+}
+
+#custom-lock, #custom-sleep, #custom-exit {
+    padding: 0 8px;
+}
+
+#custom-reboot {
+    color: @clgn;
+    padding-right: 8px;
+}
+
+#custom-lock {
+    color: @clbl;
+}
+
+#custom-sleep {
+    color: @clyl;
+}
+
+#custom-exit {
+    color: @clcy;
+    padding-right: 16px;
+}
+
+@keyframes blink {
+    to {
+        color: transparent;
+    }
+}

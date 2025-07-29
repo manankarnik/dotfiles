@@ -1,0 +1,146 @@
+{
+    "layer": "top",
+    "spacing": 16,
+    "modules-left": [
+        "hyprland/workspaces",
+        "disk",
+        "memory",
+        "cpu", 
+        "temperature",
+        "battery", 
+        "privacy" 
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "tray",
+        "network", 
+        "bluetooth", 
+        "backlight", 
+        "wireplumber", 
+        "wireplumber#source", 
+        "clock",
+        "clock#date",
+        "group/power"
+    ],
+    "hyprland/window": { 
+        "tooltip": false,
+        "max-length": 50
+    },
+    "hyprland/workspaces": {
+        "persistent-workspaces": { "*": 5 },
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "active": "",
+            "urgent": ""
+        },
+    },
+    "disk": {
+        "format": " <span>{percentage_used}%</span>",
+    },
+    "bluetooth": {
+        "format": "",
+        "on-click": "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || bluetoothctl power on"
+    },
+    "backlight": {
+        "tooltip-format": "Backlight: {percent}%",
+        "format": "{icon}",
+        "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"]
+    },
+    "wireplumber": {
+        "format": "{icon}",
+        "format-muted": "",
+        "tooltip-format": "Volume: {volume}%",
+        "on-right-click": "pwvucontrol",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "format-icons": ["", "", ""]
+    },
+    "wireplumber#source": {
+        "node-type": "Audio/Source",
+        "format": "",
+        "format-muted": "",
+        "tooltip-format": "Volume: {volume}%",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+    },
+    "privacy": {
+        "icon-spacing": 8,
+        "icon-size": 18,
+        "modules": [{"type": "screenshare"}, {"type": "audio-in"}, {"type": "audio-out"}]
+    },
+    "network": {
+        "format-wifi": "{icon}",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disabled": "",
+        "format-disconnected": "󰤭",
+        "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+        "tooltip-format": "{ifname} via {gwddr}",
+        "tooltip-format-wifi": "Wifi: {essid} ({signalStrength}%)",
+        "tooltip-format-disabled": "Disable",
+        "on-click": "nmcli radio wifi | grep -q 'disabled' && nmcli radio wifi on || nmcli radio wifi off"
+    },
+    "temperature": {
+        "tooltip": false,
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "cpu": {
+        "format": " {usage}%",
+    },
+    "memory": {
+        "format": " {percentage}%",
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂",  "󰁹"]
+    },
+    "clock": {
+        "tooltip": false,
+        "interval": 1,
+        "format": "󰥔 {:%H:%M:%S}",
+    },
+    "clock#date": {
+        "tooltip-format": "{calendar}",
+        "format": " {:%d/%m/%Y}",
+    },
+    "tray": {
+        "spacing": 10,
+    },
+    "group/power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": false,
+            "children-class": "power",
+        },
+        "modules": ["custom/power", "custom/reboot", "custom/lock", "custom/sleep", "custom/exit"],
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip-format": "Shutdown",
+        "on-click": "poweroff"
+    },
+    "custom/reboot": {
+        "format": "󰜉",
+        "tooltip-format": "Reboot",
+        "on-click": "reboot"
+    },
+    "custom/lock": {
+        "format": "󰌾",
+        "tooltip-format": "Lock",
+        "on-click": "hyprlock"
+    },
+    "custom/sleep": {
+        "format": "󰤄",
+        "tooltip-format": "Sleep",
+        "on-click": "systemctl suspend"
+    },
+    "custom/exit": {
+        "format": "󰗼",
+        "tooltip-format": "Exit Hyprland",
+        "on-click": "hyprctl dispatch exit"
+    }
+}
