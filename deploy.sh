@@ -16,7 +16,7 @@ DOTFILES_DIR="$HOME/dotfiles"
 CONFIG_DIR="$HOME/.config"
 
 LINK_DIR=$HOME
-link .xinitrc .bashrc
+link .bashrc
 
 LINK_DIR=$CONFIG_DIR
-link bspwm sxhkd kitty rofi polybar nvim
+link hypr waybar kitty nvim
