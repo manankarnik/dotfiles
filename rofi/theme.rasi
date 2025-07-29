@@ -1,23 +1,23 @@
 @theme "~/.config/daub/gen/colors.rasi"
 
 * {
-    background-color: @lv00;
+    background-color: transparent;
 }
 
 window {
+    background-color: rgba(0, 0, 0, 0.6);
     border: 2px;
     border-color: @clbl;
+    border-radius: 8px;
 }
 
 inputbar {
     color: @lv05;
     padding: 12px;
-    background-color: @lv00;
 }
 
 entry, prompt {
     text-color: inherit;
-    background-color: inherit;
 }
 
 prompt {
@@ -25,7 +25,6 @@ prompt {
 }
 
 listview {
-    background-color: @lv00;
     padding: 12px;
     lines: 8;
     columns: 2;
@@ -33,17 +32,14 @@ listview {
 
 element {
     padding: 12px;
-    background-color: transparent;
     color: @lv05;
 }
 
 element selected.normal {
-    background-color: @lv00;
     text-color: @clyl;
 }
 
 element-text, element-icon {
-    background-color: inherit;
     text-color: inherit;
 }
 
