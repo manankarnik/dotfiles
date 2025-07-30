@@ -5,7 +5,7 @@
 }
 
 window {
-    background-color: transparent;
+    background-color: @lv00;
     border: 2px;
     border-color: @clbl;
     border-radius: 8px;

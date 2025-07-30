@@ -10,15 +10,16 @@ window {
 }
 
 tooltip {
-    background-color: alpha(@lv00, 0.6);
+    background-color: @lv00;
+    border-radius: 12px;
 }
 
 .modules-left, .modules-center, .modules-right {
     margin: 8px 8px 0 8px;
     padding: 2px 8px;
-    background-color: alpha(@lv00, 0.6);
-    border: 2px solid @lv00;
+    background-color: alpha(@lv00, 0.8);
     border-radius: 12px;
+    border: 2px solid @clbl;
 }
 
 window.empty .modules-center {
