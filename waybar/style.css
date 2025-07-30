@@ -114,6 +114,10 @@ window.empty .modules-center {
     padding-right: 16px;
 }
 
+#custom-notification {
+    color: @clmg;
+}
+
 @keyframes blink {
     to {
         color: transparent;
