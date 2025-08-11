@@ -106,7 +106,10 @@
     },
     "clock#date": {
         "tooltip-format": "{calendar}",
-        "format": " {:%d/%m/%Y}",
+        "format": " {:%a | %d %b, %Y}",
+        "calendar": {
+            "format": { "today": "<b><u>{}</u></b>" }
+        }
     },
     "tray": {
         "spacing": 10,
