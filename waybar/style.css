@@ -15,11 +15,11 @@ tooltip {
 }
 
 .modules-left, .modules-center, .modules-right {
-    margin: 8px 8px 0 8px;
+    margin: 4px 8px 0 8px;
     padding: 2px 8px;
     background-color: alpha(@lv00, 0.8);
     border-radius: 12px;
-    border: 2px solid @clbl;
+    border: 1px solid @lv01;
 }
 
 window.empty .modules-center {
