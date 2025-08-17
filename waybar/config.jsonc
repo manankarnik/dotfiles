@@ -54,7 +54,8 @@
         "format": "{icon}",
         "format-muted": "",
         "tooltip-format": "Volume: {volume}%",
-        "on-right-click": "pwvucontrol",
+        "max-volume": 200,
+        "on-click-right": "pavucontrol",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "format-icons": ["", "", ""]
     },
