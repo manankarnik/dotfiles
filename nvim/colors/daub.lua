@@ -221,38 +221,6 @@ hi("@text.warning",     { fg = colors.clyl, bg = colors.lv01 })
 hi("@text.danger",      { fg = colors.clrd, bg = colors.lv01 })
 
 -- =============================================
--- Plugin: Blink Cmp
--- =============================================
-hi("BlinkCmpGhostText",         { fg = colors.lv02    })
-hi("BlinkCmpKind",              { link = "Normal"     })
-hi("BlinkCmpKindText",          { link = "Normal"     })
-hi("BlinkCmpKindMethod",        { link = "Function"   })
-hi("BlinkCmpKindFunction",      { link = "Function"   })
-hi("BlinkCmpKindConstructor",   { link = "Function"   })
-hi("BlinkCmpKindField",         { link = "Identifier" })
-hi("BlinkCmpKindVariable",      { link = "Identifier" })
-hi("BlinkCmpKindClass",         { link = "Type"       })
-hi("BlinkCmpKindInterface",     { link = "Type"       })
-hi("BlinkCmpKindModule",        { link = "@module"    })
-hi("BlinkCmpKindProperty",      { link = "Identifier" })
-hi("BlinkCmpKindUnit",          { link = "Constant"   })
-hi("BlinkCmpKindValue",         { link = "Constant"   })
-hi("BlinkCmpKindEnum",          { link = "Type"       })
-hi("BlinkCmpKindKeyword",       { link = "Keyword"    })
-hi("BlinkCmpKindSnippet",       { link = "String"     })
-hi("BlinkCmpKindColor",         { link = "Normal"     })
-hi("BlinkCmpKindFile",          { link = "Normal"     })
-hi("BlinkCmpKindReference",     { link = "Normal"     })
-hi("BlinkCmpKindFolder",        { link = "Normal"     })
-hi("BlinkCmpKindEnumMember",    { link = "Constant"   })
-hi("BlinkCmpKindConstant",      { link = "Constant"   })
-hi("BlinkCmpKindStruct",        { link = "Type"       })
-hi("BlinkCmpKindEvent",         { link = "Normal"     })
-hi("BlinkCmpKindOperator",      { link = "Normal"     })
-hi("BlinkCmpKindTypeParameter", { link = "Identifier" })
-hi("BlinkCmpMenuSelection",     { link = "Visual"     })
-
--- =============================================
 -- Plugin: Todo comments
 -- =============================================
 -- PERF
@@ -289,19 +257,4 @@ hi("TodoBgWARN",   { fg = colors.lv00, bg = colors.clyl })
 hi("TodoFgTEST",   { fg = colors.clmg })
 hi("TodoSignTEST", { fg = colors.clmg })
 hi("TodoBgTEST",   { fg = colors.lv00, bg = colors.clmg })
-
--- =============================================
--- Plugin: Compile Mode
--- =============================================
-hi("CompileModeMessageRow",       { fg = colors.clmg })
-hi("CompileModeMessageCol",       { fg = colors.clcy })
-hi("CompileModeError",            { fg = colors.clrd })
-hi("CompileModeWarning",          { fg = colors.clyl })
-hi("CompileModeInfo",             { fg = colors.clgn })
-hi("CompileModeCommandOutput",    { fg = colors.clbl })
-hi("CompileModeCheckResult",      { fg = colors.clbn })
-hi("CompileModeDirectoryMessage", { link = "CompileModeCommandOutput"  })
-hi("CompileModeOutputFile",       { link = "CompileModeMessageRow"     })
-hi("CompileModeCheckTarget",      { link = "CompileModeCheckResult"    })
-hi("CompileModeMessage",          { fg = colors.lv05, underline = true })
 -- stylua: ignore end
