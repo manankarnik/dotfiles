@@ -53,25 +53,6 @@ require("lazy").setup({
 		},
 	},
 	{
-		"ej-shafran/compile-mode.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			vim.g.compile_mode = {}
-			vim.keymap.set("n", "<C-p>", "<cmd>PrevError<CR>", {})
-			vim.keymap.set("n", "<C-n>", "<cmd>NextError<CR>", {})
-		end,
-	},
-	{
-		"Saghen/blink.cmp",
-		version = "1.*",
-		opts = {
-			keymap = { preset = "default" },
-			completion = {
-				ghost_text = { enabled = true },
-			},
-		},
-	},
-	{
 		"stevearc/conform.nvim",
 		event = "BufWritePre",
 		cmd = "ConformInfo",
