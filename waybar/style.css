@@ -17,7 +17,7 @@ tooltip {
 .modules-left, .modules-center, .modules-right {
     margin: 4px 8px 0 8px;
     padding: 2px 8px;
-    background-color: alpha(@lv00, 0.8);
+    background-color: @lv00;
     border-radius: 12px;
     border: 1px solid @lv01;
 }
