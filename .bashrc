@@ -6,4 +6,5 @@
 [[ $- != *i* ]] && return
 
 alias ls="lsd"
+alias ssh="kitten ssh"
 eval $(starship init bash)
