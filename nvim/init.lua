@@ -1,7 +1,5 @@
-vim.cmd.colorscheme("daub")
-
-require("options")
-require("keymaps")
-require("autocmd")
-require("plugins")
-require("lsp")
+require("core.options")
+require("core.keymaps")
+require("core.autocmd")
+require("core.lazy")
+-- vim.cmd.colorscheme("catppuccin")
