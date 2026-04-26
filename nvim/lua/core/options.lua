@@ -10,7 +10,6 @@ local options = {
 	cursorline     = true,
 	breakindent    = true,
 	undofile       = true,
-	expandtab      = true,
 	confirm        = true,
 	showmode       = false,
 	swapfile       = false,

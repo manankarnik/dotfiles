@@ -7,9 +7,6 @@ return {
 		opts = {
 			transparent_background = true,
 		},
-		init = function()
-			vim.cmd.colorscheme("catppuccin")
-		end,
 	},
 	{
 		"rose-pine/neovim",

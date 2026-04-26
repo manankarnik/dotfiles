@@ -1,4 +1,4 @@
--- Switch between undo branches.
+-- Switch between undo branches
 return {
 	"mbbill/undotree",
 	config = function()
