@@ -16,7 +16,7 @@ DOTFILES_DIR="$HOME/dotfiles"
 CONFIG_DIR="$HOME/.config"
 
 LINK_DIR=$HOME
-link .bashrc
+link .bashrc .clang-format
 
 LINK_DIR=$CONFIG_DIR
 link hypr waybar rofi kitty nvim
