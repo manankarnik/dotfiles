@@ -19,4 +19,4 @@ LINK_DIR=$HOME
 link .bashrc .clang-format
 
 LINK_DIR=$CONFIG_DIR
-link hypr waybar rofi kitty nvim
+link hypr waybar rofi kitty nvim emacs
