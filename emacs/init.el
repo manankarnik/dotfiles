@@ -17,14 +17,15 @@
 (global-display-line-numbers-mode 1)
 
 (setq display-line-numbers-type 'relative)
-(set-face-attribute 'default nil :font "CaskaydiaCove Nerd Font Mono" :height 150)
+(set-face-attribute 'default nil :font "Iosevka Nerd Font Mono" :height 150)
 
-(set-frame-parameter nil 'alpha-background 80)
+(set-frame-parameter nil 'alpha-background 90)
 
 ;;; Editing & Indentation
 (delete-selection-mode 1)
 (show-paren-mode 1)
 
+(setq-default c-basic-offset 4)
 (setq-default c-ts-mode-indent-offset 4)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -38,7 +39,26 @@
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
 
 ;;; Eglot
-(add-hook 'prog-mode-hook 'eglot-ensure)
+;; (add-hook 'prog-mode-hook 'eglot-ensure)
+
+;; Latex
+(defun my/latex-compile-on-save ()
+  "Silently compile LaTeX file on save using pdflatex with -shell-escape."
+  (when (and (buffer-file-name)
+             (memq major-mode '(latex-mode LaTeX-mode)))
+    (start-process-shell-command
+     "pdflatex-on-save"
+     nil
+     (concat "pdflatex -shell-escape -interaction=nonstopmode " 
+             (shell-quote-argument (buffer-file-name))))))
+
+(add-hook 'LaTeX-mode-hook
+          (lambda ()
+            (add-hook 'after-save-hook #'my/latex-compile-on-save nil t)))
+
+(add-hook 'latex-mode-hook
+          (lambda ()
+            (add-hook 'after-save-hook #'my/latex-compile-on-save nil t)))
 
 ;;; Package Management
 (require 'package)
@@ -50,8 +70,9 @@
 ;;; Packages
 (use-package magit)
 
-(use-package catppuccin-theme
-  :config (load-theme 'catppuccin :no-confirm))
+(use-package doom-themes
+  :config (load-theme 'doom-gruvbox :no-confirm))
+
 
 (use-package which-key
   :config (which-key-mode 1))
