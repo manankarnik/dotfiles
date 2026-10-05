@@ -71,6 +71,7 @@ hl.window_rule({
     rounding    = 0,
 })
 
+hl.curve("quick", { type = "bezier", points = { {0.15, 0}, {0.1, 1} }})
 hl.animation({ leaf = "windows",    enabled = true, speed = 1, bezier = "quick" })
 hl.animation({ leaf = "workspaces", enabled = true, speed = 1, bezier = "quick" })
 
