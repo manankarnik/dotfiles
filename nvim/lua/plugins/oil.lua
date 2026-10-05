@@ -9,11 +9,6 @@ return {
 				"size",
 				"mtime",
 			},
-			keymaps = {
-				["<C-c>"] = false,
-				["<C-l>"] = false,
-				["<C-;>"] = "actions.refresh",
-			},
 			view_options = {
 				show_hidden = true,
 			},

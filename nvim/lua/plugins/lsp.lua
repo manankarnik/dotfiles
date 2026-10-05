@@ -20,6 +20,15 @@ return {
 						},
 					},
 				})
+				vim.lsp.config("lua_ls", {
+					settings = {
+						Lua = {
+							diagnostics = {
+								globals = { "vim", "hl" },
+							},
+						},
+					},
+				})
 			end,
 		},
 		{ "williamboman/mason.nvim", config = true },
@@ -40,7 +49,6 @@ return {
 	config = function()
 		local capabilities = require("blink.cmp").get_lsp_capabilities()
 		local servers = {
-			lua_ls = {},
 			stylua = {},
 			-- clangd = {},
 			rust_analyzer = {},
@@ -60,6 +68,9 @@ return {
 			handlers = {
 				function(server_name)
 					local server = servers[server_name] or {}
+					if server_name == "lua_ls" then
+						print(vim.inspect(server))
+					end
 					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 					require("lspconfig")[server_name].setup(server)
 				end,
