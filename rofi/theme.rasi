@@ -1,18 +1,17 @@
-@theme "~/.config/daub/gen/colors.rasi"
+@import "catppuccin-mocha"
 
 * {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 window {
-    background-color: @lv00;
+    background-color: @mantle;
     border: 2px;
-    border-color: @clbl;
-    border-radius: 8px;
+    border-color: @mauve;
 }
 
 inputbar {
-    color: @lv05;
+    color: @text;
     padding: 12px;
 }
 
@@ -32,11 +31,11 @@ listview {
 
 element {
     padding: 12px;
-    color: @lv05;
+    color: @text;
 }
 
 element selected.normal {
-    text-color: @clyl;
+    text-color: @yellow;
 }
 
 element-text, element-icon {

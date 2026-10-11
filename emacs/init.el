@@ -19,8 +19,6 @@
 (setq display-line-numbers-type 'relative)
 (set-face-attribute 'default nil :font "Iosevka Nerd Font Mono" :height 150)
 
-(set-frame-parameter nil 'alpha-background 90)
-
 ;;; Editing & Indentation
 (delete-selection-mode 1)
 (show-paren-mode 1)
@@ -70,8 +68,8 @@
 ;;; Packages
 (use-package magit)
 
-(use-package doom-themes
-  :config (load-theme 'doom-gruvbox :no-confirm))
+(use-package catppuccin-theme
+  :config (load-theme 'catppuccin :no-confirm))
 
 
 (use-package which-key
