@@ -27,7 +27,7 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 
 vim.o.list = true
-vim.o.listchars = "tab:» ,trail:·,space:·"
+vim.o.listchars = "tab:» ,trail:·"
 
 vim.o.cursorline = true
 vim.o.cursorlineopt = "number"
