@@ -10,5 +10,8 @@ require("blink.cmp").setup({
 		menu = { auto_show = true },
 		documentation = { auto_show = true, auto_show_delay_ms = 0 },
 	},
+	sources = {
+		default = { "lsp", "path", "snippets" },
+	},
 	signature = { enabled = true },
 })
