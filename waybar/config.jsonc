@@ -126,12 +126,12 @@
     "custom/power": {
         "format": "",
         "tooltip-format": "Shutdown",
-        "on-click": "poweroff"
+        "on-click": "zenity --question --title='Shutdown' --text='Shut down now?'  --ok-label='Shut down' --cancel-label='Cancel' --icon=system-shutdown && poweroff"
     },
     "custom/reboot": {
         "format": "󰜉",
         "tooltip-format": "Reboot",
-        "on-click": "reboot"
+        "on-click": "zenity --question --title='Reboot' --text='Reboot now?'  --ok-label='Reboot' --cancel-label='Cancel' --icon=system-reboot && reboot"
     },
     "custom/lock": {
         "format": "󰌾",
@@ -146,7 +146,7 @@
     "custom/exit": {
         "format": "󰗼",
         "tooltip-format": "Exit Hyprland",
-        "on-click": "hyprctl dispatch exit"
+        "on-click": "zenity --question --title='Exit Hyprland' --text='Exit Hyprland now?'  --ok-label='Exit' --cancel-label='Cancel' --icon=application-exit-symbolic && hyprctl dispatch exit"
     },
     "custom/notification": {
         "tooltip": false,
